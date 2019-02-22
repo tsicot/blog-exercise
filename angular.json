@@ -3,21 +3,21 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "mon-premier-projet": {
+    "blog-exercise": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
       "prefix": "app",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "sass"
+          "style": "scss"
         }
       },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/mon-premier-projet",
+            "outputPath": "dist/blog-exercise",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -27,6 +27,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.scss"
             ],
             "scripts": [],
@@ -62,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "mon-premier-projet:build"
+            "browserTarget": "blog-exercise:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "mon-premier-projet:build:production"
+              "browserTarget": "blog-exercise:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "mon-premier-projet:build"
+            "browserTarget": "blog-exercise:build"
           }
         },
         "test": {
@@ -107,7 +108,7 @@
         }
       }
     },
-    "mon-premier-projet-e2e": {
+    "blog-exercise-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -116,11 +117,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "mon-premier-projet:serve"
+            "devServerTarget": "blog-exercise:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "mon-premier-projet:serve:production"
+              "devServerTarget": "blog-exercise:serve:production"
             }
           }
         },
@@ -136,5 +137,5 @@
       }
     }
   },
-  "defaultProject": "mon-premier-projet"
+  "defaultProject": "blog-exercise"
 }
