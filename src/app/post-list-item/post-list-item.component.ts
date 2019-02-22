@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./post-list-item.component.scss']
 })
 export class PostListItemComponent implements OnInit {
-  @Input() post: string;
+  @Input() post: Post;
   onLike(){
     this.post.loveIts +=1;
   }
