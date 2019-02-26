@@ -35,7 +35,7 @@ export class PostService {
     this.emitPosts();
   }
 
-  updatePost(postToUpdate: Post){
+  updatePost(postToUpdate: Post) {
     const postIndex = this.posts.findIndex(
       (currentPost) => {
         return currentPost === postToUpdate;
